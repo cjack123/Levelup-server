@@ -1,0 +1,29 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "game_type": 1,
+            "title": "Uno",
+            "maker": "Rainbow Co",
+            "gamer": 1,
+            "number_of_players": 4,
+            "skill_level": 3
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "game_type": 2,
+            "title": "Spades",
+            "maker": "Ice Cream Inc",
+            "gamer": 1,
+            "number_of_players": 4,
+            "skill_level": 3
+        }
+    }
+]
+
+
+
