@@ -49,8 +49,9 @@ class GameView(ViewSet):
         serializer = Gamer.objects.get(user=request.auth.user)
         serializer = CreateGameSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(gamer=gamer)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        saved_game = serializer.save(gamer=gamer)
+        response = GameSerializer(saved_game)
+        return Response(response.data, status=status.HTTP_201_CREATED)
 
 
 class GameSerializer(serializers.ModelSerializer):
